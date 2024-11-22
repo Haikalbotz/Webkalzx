@@ -1,0 +1,104 @@
+/* Gaya dasar */
+body {
+  font-family: Fantasy;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Animasi Fade In */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animasi Transisi */
+        .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+/* Hover Zoom */
+.hover-zoom:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.notification-box {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.close-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.close-btn:hover {
+  background-color: #0056b3;
+}
+.text-light-effect {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .text-light-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.7) 50%, transparent 70%);
+            animation: slide 2s infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                left: -150%;
+            }
+            100% {
+                left: 150%;
+            }
+        }
